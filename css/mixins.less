@@ -1,0 +1,66 @@
+/*
+ * Mixins
+ */
+
+.debug(@color: red) {
+  border: 1px solid @color;
+}
+
+.antialiased() {
+  -webkit-font-smoothing: antialiased;
+}
+
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.glow(@size: 20px, @color: black) {
+  -moz-box-shadow: 0 0 @size fadeout(@color, 50%);
+  -webkit-box-shadow: 0 0 @size fadeout(@color, 50%);
+  box-shadow: 0 0 @size fadeout(@color, 50%);
+}
+
+.user-select(@argument: none) {
+  -webkit-user-select: @argument;
+  -moz-user-select: @argument;
+  -ms-user-select: @argument;
+  user-select: @argument;
+}
+
+.smoothly(@time: .1s, @attr: all) {
+     -webkit-transition: @attr @time ease-in;
+     -moz-transition: @attr  @time ease-in;
+     -ms-transition: @attr @time ease-in;
+     transition: @attr @time ease-in;
+     -webkit-transform: translateZ(0);
+}
+
+.columns(@number: 2, @gap: 12px) {
+  -moz-column-count: @number; /* Firefox */
+  -webkit-column-count: @number; /* Safari and Chrome */
+  -o-column-count: @number; /* opera? */
+  column-count: @number;
+  
+  column-gap: @gap;
+  -moz-column-gap: @gap;
+  -webkit-column-gap: @gap;
+  -o-column-gap: @gap;
+}
+
+.proportional-numbers() {
+  -moz-font-feature-settings: "onum=1, pnum=1";
+  -ms-font-feature-settings: "onum", "pnum";
+  -webkit-font-feature-settings: "onum", "pnum";
+  -o-font-feature-settings: "onum", "pnum";
+  font-feature-settings: "onum", "pnum";
+}
+
+.tabular-numbers() {
+  -moz-font-feature-settings: "onum=1, tnum=1";
+  -ms-font-feature-settings: "onum", "tnum";
+  -webkit-font-feature-settings: "onum", "tnum";
+  -o-font-feature-settings: "onum", "tnum";
+  font-feature-settings: "onum", "tnum";
+}
