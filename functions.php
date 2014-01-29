@@ -32,7 +32,7 @@ function my_gallery_shortcode($attr) {
             unset($attr['orderby']);
     }
 
-    extract(shortcode_atts(array('order' => 'ASC', 'orderby' => 'menu_order ID', 'id' => $post -> ID, 'itemtag' => 'dl', 'icontag' => 'dt', 'captiontag' => 'dd', 'columns' => 3, 'size' => 'thumbnail', 'include' => '', 'exclude' => ''), $attr));
+    extract(shortcode_atts(array('order' => 'ASC', 'orderby' => 'menu_order ID', 'id' => $post -> ID, 'itemtag' => 'dl', 'icontag' => 'dt', 'captiontag' => 'dd', 'columns' => 3, 'size' => 'medium', 'include' => '', 'exclude' => ''), $attr));
 
     $id = intval($id);
     if ('RAND' == $order)

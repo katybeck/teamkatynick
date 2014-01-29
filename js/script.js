@@ -1,24 +1,13 @@
 $(document).ready(function() {
 
-	var msnry = new Array();
-
-	var containers = $('.gallery');
-
-	if (containers) {
-
-		$.each(containers, function(index, value) {
-			msnry[index] = new Masonry(value, {
-				itemSelector : '.gallery-item'
-			});
-		});
-
+	function initialize() {
+		var mapOptions = {
+			center : new google.maps.LatLng(-34.397, 150.644),
+			zoom : 8
+		};
+		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 	}
 
-	//update the masonry as each new image comes in so we don't get overlaps.
-	$(window).load(function() {
-		$.each(msnry, function(index, value) {
-			msnry[index].layout();
-		})
-	});
+	google.maps.event.addDomListener(window, 'load', initialize);
 
-}); 
+});

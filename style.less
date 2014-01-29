@@ -1,14 +1,18 @@
 @max: 1000px;
-@min: 300px;
+@min: 30px;
 @buffer: 2%;
 
 @import 'css/mixins';
 @import 'css/reset';
 
-@primarycolor: orange;
-@primarytext: white;
-@secondarycolor: lighten(@primarycolor, 25%);
+@offwhite: #F1F2ED;
+
+@primarycolor: #A3AF5D;
+@primarytext: @offwhite;
+@secondarycolor: #677B35;
+// @secondarytext: darken(@primarycolor, 20%);
 @secondarytext: @primarycolor;
+@accentred: red;
 
 @bodytype: "adelle", serif;
 @headings: "estilo-regular", sans-serif;
@@ -16,11 +20,13 @@
 
 .maincontent() {
   font-family: @bodytype;
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 1.4em;
   font-weight: 500;
 }
 
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
 
 body {
 	background: @primarycolor;
@@ -34,6 +40,7 @@ body {
 h1, h2, h3 {
   font-family: @headings;
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 #container {
@@ -52,7 +59,9 @@ h1, h2, h3 {
     h1 {
       text-align: center;
       margin: 0;
-      padding: 0;
+      position: relative;
+      top: 5em;
+      padding: 0;      
     }
     
     nav {
@@ -62,15 +71,16 @@ h1, h2, h3 {
         margin: 0;
         padding: 0;
         display: inline-block;
+        font-family: @subheadings;
+        font-weight: normal;
       }
-      
     }
-    
   }
   
   footer {
     width: 100%;
     background: lighten(black, 30%);
+    display: none;
   }
   
   #main {
@@ -88,15 +98,16 @@ h1, h2, h3 {
 }
 
 section {
-  padding: 3em 0em;
   
+  padding: 2em 0em;
   background: @secondarycolor;
-    color: @secondarytext;
+  color: @secondarytext;
   overflow: hidden;
   .maincontent();
+  .antialiased();
   
   &.dark {
-    .antialiased();
+    
   }
   
   &.bright {
@@ -106,8 +117,9 @@ section {
   
   h3 {
     font-size: 2em;
-    font-weight: normal;
+    font-weight: 700;
     text-align: center;
+    margin: .75em 0;
   }
   
   &.photos {
@@ -121,11 +133,15 @@ section {
   &.getting-to-dallas,
   &.travel-lodging,
   &.things-to-do,
-  &.our-story {
+  &.our-story,
+  &.registry,
+  &.suggest-a-song {
+    
     .content-inner {
-      max-width: 55%;
+      max-width: 35em;
       min-width: @min;
       margin: 0 auto;
+      padding: 0 1em 0 1em;
       
       ul {
         
@@ -144,7 +160,34 @@ section {
     }
   }
   
+  &.registry,
+  &.suggest-a-song {
+    text-align: center;
+  }
+  
+  &.wedding-details {
+    
+    .content-inner {
+      max-width: 50%;
+      margin: 1em auto;
+      .columns(2);
+      
+      ul {
+        height: 12em;
+        margin: 0;
+      }
+      
+      li {
+        display: inline-block;
+        text-align: center;
+      }
+    }
+    
+  }
+  
   &.keep-in-touch {
+    
+    background: lighten(black, 30%);
     
     .content-inner {
       max-width: 30%;
@@ -218,6 +261,7 @@ section {
 }
 
 #sidebar {
+  
   padding: 2em 0em;
   .columns(3);
   color: white;
@@ -261,16 +305,15 @@ section {
   text-align: center;
   
   .gallery-item {
-    
     display: inline-block;
+    height: auto;
     text-align: center;
-    margin: .5em;
-    width: 100%;
+    margin: 0 10px 0 0;
     
     img {
       width: 100%;
+      margin: 0;
       height: auto;
-      min-width: 100px;
       border: 0 !important;
       .smoothly();
       
@@ -281,3 +324,4 @@ section {
     
   }
 }
+
