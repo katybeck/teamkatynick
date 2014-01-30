@@ -571,9 +571,57 @@ section {
   -moz-box-shadow: inset 0 0 2em 2em rgba(30, 65, 71, 0.050000000000000044);
   box-shadow: inset 0 0 2em 2em rgba(30, 65, 71, 0.050000000000000044);
 }
+section.dark h3 {
+  color: white;
+}
+section.dark a {
+  color: #1e4147;
+  font-family: "jaf-domus-titling-web", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1em;
+  margin-top: 1em;
+  height: 2.75em;
+  display: block;
+  line-height: 1.2em;
+  border-bottom: 1px solid #1e4147;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  -webkit-transform: translateZ(0);
+}
+section.dark a:hover {
+  color: #aac789;
+  border-bottom: 1px solid #aac789;
+}
 section.bright {
   background: #1e4147;
   color: #aac789;
+}
+section.bright h3 {
+  color: white;
+}
+section.bright a {
+  color: #437356;
+  font-family: "jaf-domus-titling-web", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1em;
+  margin-top: 1em;
+  height: 2.75em;
+  display: block;
+  line-height: 1.2em;
+  border-bottom: 1px solid #437356;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  -webkit-transform: translateZ(0);
+}
+section.bright a:hover {
+  color: #aac789;
+  border-bottom: 1px solid #aac789;
 }
 section h3 {
   font-size: 2em;
@@ -613,10 +661,10 @@ section.suggest-a-song .content-inner ul {
   /* opera? */
 
   column-count: 3;
-  column-gap: 12px;
-  -moz-column-gap: 12px;
-  -webkit-column-gap: 12px;
-  -o-column-gap: 12px;
+  column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  -o-column-gap: 1.5em;
   margin: 0;
   padding: 0;
 }
@@ -631,7 +679,8 @@ section.suggest-a-song .content-inner ul li {
   padding: 0;
 }
 section.registry,
-section.suggest-a-song {
+section.suggest-a-song,
+section.getting-to-dallas {
   text-align: center;
 }
 section.wedding-details .content-inner {
@@ -651,6 +700,22 @@ section.wedding-details .content-inner {
   -moz-column-gap: 12px;
   -webkit-column-gap: 12px;
   -o-column-gap: 12px;
+}
+section.wedding-details .content-inner strong {
+  font-family: "jaf-domus-titling-web", sans-serif;
+  color: #1e4147;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: -0.5em;
+  padding: 0;
+}
+section.wedding-details .content-inner em {
+  font-weight: bold;
+  color: #1e4147;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: -0.5em;
+  padding: 0;
 }
 section.wedding-details .content-inner ul {
   height: 12em;

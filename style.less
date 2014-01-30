@@ -130,11 +130,58 @@ section {
   
   &.dark {
     
+    h3 {
+      color: white;
+    }
+    
+    a {
+      color: @teal;
+      font-family: @subheadings;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1em;
+      margin-top: 1em;
+      height: 2.75em;
+      display: block;
+      line-height: 1.2em;
+      border-bottom: 1px solid @teal;
+      .smoothly();
+      
+      &:hover {
+        color: @lightgreen;
+        border-bottom: 1px solid @lightgreen;
+      }
+    }
+    
   }
   
   &.bright {
     background: @primarycolor;
     color: @primarytext;
+    
+    h3 {
+      color: white;
+    }
+    
+    a {
+      color: @darkgreen;
+      font-family: @subheadings;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1em;
+      margin-top: 1em;
+      height: 2.75em;
+      display: block;
+      line-height: 1.2em;
+      border-bottom: 1px solid @darkgreen;
+      .smoothly();
+      
+      &:hover {
+        color: @lightgreen;
+        border-bottom: 1px solid @lightgreen;
+      }
+    }
+    
   }
   
   h3 {
@@ -167,7 +214,7 @@ section {
       
       ul {
         
-        .columns(3);
+        .columns(3, 1.5em);
         margin: 0;
         padding: 0;
         
@@ -176,14 +223,13 @@ section {
           margin: 0;
           padding: 0;
         }
-        
       }
-      
     }
   }
   
   &.registry,
-  &.suggest-a-song {
+  &.suggest-a-song,
+  &.getting-to-dallas {
     text-align: center;
   }
   
@@ -193,6 +239,24 @@ section {
       max-width: 50%;
       margin: 1em auto;
       .columns(2);
+      
+      strong {
+        font-family: @subheadings;
+        color: @teal;
+        display: block;
+        margin-top: 1em;
+        margin-bottom: -.5em;
+        padding: 0;
+      }
+      
+      em {
+        font-weight: bold;
+        color: @teal;
+        display: block;
+        margin-top: 1em;
+        margin-bottom: -.5em;
+        padding: 0;
+      }
       
       ul {
         height: 12em;
@@ -208,7 +272,6 @@ section {
   }
   
   &.keep-in-touch {
-    
     
     .content-inner {
       max-width: 30%;
