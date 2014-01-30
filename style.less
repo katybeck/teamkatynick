@@ -5,14 +5,18 @@
 @import 'css/mixins';
 @import 'css/reset';
 
-@offwhite: #F1F2ED;
 
-@primarycolor: #A3AF5D;
-@primarytext: @offwhite;
-@secondarycolor: #677B35;
-// @secondarytext: darken(@primarycolor, 20%);
-@secondarytext: @primarycolor;
-@accentred: red;
+@offwhite: #FAE3B4;
+@accentred: #F32822;
+@darkgreen: #437356;
+@lightgreen: #AAC789;
+@teal: #1E4147;
+
+@primarycolor: @teal;
+@primarytext: @lightgreen;
+@secondarycolor: @darkgreen;
+@secondarytext: @offwhite;
+
 
 @bodytype: "adelle", serif;
 @headings: "estilo-regular", sans-serif;
@@ -52,20 +56,37 @@ h1, h2, h3 {
     width: 100%;
     margin: 0;
     padding: 0;
-    height: 15em;
-    background: @primarycolor url('css/partydots.png') no-repeat top center;
+    height: 16em;
+    .innerglow(2em, black, 90%);
+    background: @teal url('css/partydots.png') no-repeat 0em -3em;
     background-scale: 100% 100%;
+    
+    h3 {
+      font-family: @subheadings;
+      font-weight: 300;
+      font-size: .85em;
+      color: white;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      padding-top: 4.4em;
+    }
     
     h1 {
       text-align: center;
       margin: 0;
       position: relative;
-      top: 5em;
-      padding: 0;      
+      top: .2em;
+      font-size: 3em;
+      padding: 0;  
+      color: @lightgreen;
+      line-height: .95em;
     }
     
     nav {
       text-align: center;
+      display: none;
       ul { margin: 0; padding: 0;}
       li {
         margin: 0;
@@ -79,13 +100,13 @@ h1, h2, h3 {
   
   footer {
     width: 100%;
-    background: lighten(black, 30%);
+    background: @teal;
     display: none;
   }
   
   #main {
     @width: 100%;
-    background: lighten(black, 90%);
+    background: lighten(@teal, 90%);
   }
   
   .inner {
@@ -105,6 +126,7 @@ section {
   overflow: hidden;
   .maincontent();
   .antialiased();
+  .innerglow();
   
   &.dark {
     
@@ -117,7 +139,7 @@ section {
   
   h3 {
     font-size: 2em;
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
     margin: .75em 0;
   }
@@ -187,13 +209,20 @@ section {
   
   &.keep-in-touch {
     
-    background: lighten(black, 30%);
     
     .content-inner {
       max-width: 30%;
       min-width: @min;
       margin: 0 auto;
       text-align: left;
+      
+      .sml_thankyou {
+        margin: 0 -2em;
+        padding: 1em;
+        background: @teal;
+        color: @offwhite;
+        .glow();
+      }
       
       input, label {
         
@@ -210,26 +239,26 @@ section {
         
         width: 100%;
         background: transparent;
-        border: 1px solid fadeout(white, 50%);
+        border: 1px solid fadeout(@offwhite, 50%);
         padding: 1em 0;
         text-indent: 1em;
         font-family: @bodytype;
-        color: white;
+        color: @offwhite;
         
         &::-webkit-input-placeholder {
-           color: fadeout(white, 50%);
+           color: fadeout(@offwhite, 50%);
         }
         
         &:-moz-placeholder { /* Firefox 18- */
-           color: fadeout(white, 50%);  
+           color: fadeout(@offwhite, 50%);  
         }
         
         &::-moz-placeholder {  /* Firefox 19+ */
-           color: fadeout(white, 50%);  
+           color: fadeout(@offwhite, 50%);  
         }
         
         &:-ms-input-placeholder {  
-           color: fadeout(white, 50%);  
+           color: fadeout(@offwhite, 50%);  
         }
         
         &:focus {
@@ -241,14 +270,17 @@ section {
         &[type=submit] {
           border: 0;
           text-indent: 0;
-          background: fadeout(white, 80%);
+          background: @lightgreen;
+          color: @darkgreen;
           .smoothly();
           font-family: @headings;
           font-size: 1.5em;
           padding: .5em;
           
           &:hover {
-            background: fadeout(white, 90%);
+            background: @teal;
+            color: @lightgreen;
+            .glow();
           }
         }
         

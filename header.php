@@ -34,14 +34,15 @@
 
             <header>
                 <div class="inner">
-                    <h1>Team KatyNick</h1>
+                    <h3>october 11, 2014</h3>
+                    <h1>katy &amp; nick <br />get hitched</h1>
                     <nav>
                         <ul>
                             <?php $query = new WP_Query( 'post_type=page' ); ?>
                             <? if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the_post(); ?>
                             <li><a href="#<? echo $post -> post_name; ?>"><? the_title(); ?></a></li>
                             <? endwhile; endif; ?>
-                        w</ul>
+                        </ul>
                     </nav>
                 </div>
             </header>

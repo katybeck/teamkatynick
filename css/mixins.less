@@ -16,10 +16,16 @@
   border-radius: @radius;
 }
 
-.glow(@size: 20px, @color: black) {
-  -moz-box-shadow: 0 0 @size fadeout(@color, 50%);
-  -webkit-box-shadow: 0 0 @size fadeout(@color, 50%);
-  box-shadow: 0 0 @size fadeout(@color, 50%);
+.glow(@size: 1em, @color: @teal) {
+  -moz-box-shadow: 0 0 @size fadeout(@color, 70%);
+  -webkit-box-shadow: 0 0 @size fadeout(@color, 70%);
+  box-shadow: 0 0 @size fadeout(@color, 70%);
+}
+
+.innerglow(@size: 2em, @color: @teal, @amount: 95%) {
+  -webkit-box-shadow: inset 0 0 @size @size fadeout(@color, @amount);
+     -moz-box-shadow: inset 0 0 @size @size fadeout(@color, @amount);
+          box-shadow: inset 0 0 @size @size fadeout(@color, @amount);
 }
 
 .user-select(@argument: none) {

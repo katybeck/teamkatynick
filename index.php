@@ -12,7 +12,7 @@ if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the
 $slug = $post -> post_name;
 $classes = array($slug, $stripe);
 ?>
-
+<a name="<? echo $slug; ?>"></a>
 <section <?php post_class($classes); ?> >
     <div class="inner">
         <h3><? the_title(); ?></h3>
