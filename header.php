@@ -18,14 +18,9 @@
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
-        <script type="text/javascript" src="//use.typekit.net/avz0fqw.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/sbl5qsm.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRhm-aN8BKMfN161SwEs3Wu8E2spLsiNI&sensor=false">
-        </script>
-        <script type="text/javascript">
-			try {
-				Typekit.load();
-			} catch(e) {
-			}
         </script>
     </head>
 
