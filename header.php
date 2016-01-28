@@ -13,6 +13,7 @@
         <title>Team KatyNick</title>
         <meta name="description" content="">
         <meta name="author" content="">
+        <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1">

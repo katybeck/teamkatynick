@@ -1,3 +1,12 @@
+/*
+Theme Name: Team KatyNick
+Theme URI: http://teamkatynick.com
+Author: Beck Harris Design
+Author URI: http://beckharrisdesign.com
+Description: A theme developed for Katy + Nick's wedding
+Version: 1.0
+*/
+
 @max: 1000px;
 @min: 30px;
 @buffer: 2%;
@@ -58,7 +67,7 @@ h1, h2, h3 {
     padding: 0;
     height: 16em;
     .innerglow(2em, black, 90%);
-    background: @teal url('css/partydots.png') no-repeat 0em -3em;
+    background: @teal url('css/partydots.png') no-repeat center -3em;
     background-scale: 100% 100%;
     
     h3 {
@@ -196,6 +205,7 @@ section {
       max-width: 80%;
       min-width: @min;
       margin: 0 auto;
+      text-align: center;
     }
   }
   
@@ -229,7 +239,7 @@ section {
   
   &.registry,
   &.suggest-a-song,
-  &.getting-to-dallas {
+  &.photos {
     text-align: center;
   }
   
@@ -266,6 +276,16 @@ section {
       li {
         display: inline-block;
         text-align: center;
+      }
+
+      a {
+        border: 0;
+        margin: 5px 0;
+        color: @teal;
+        font-size: .8em;
+        &:hover {
+          color: @primarytext;
+        }
       }
     }
     
