@@ -631,6 +631,7 @@ section.travel-lodging .content-inner,
 section.things-to-do .content-inner,
 section.our-story .content-inner,
 section.registry .content-inner,
+section.attire .content-inner,
 section.suggest-a-song .content-inner {
   max-width: 35em;
   min-width: 30px;
@@ -642,6 +643,7 @@ section.travel-lodging .content-inner ul,
 section.things-to-do .content-inner ul,
 section.our-story .content-inner ul,
 section.registry .content-inner ul,
+section.attire .content-inner ul,
 section.suggest-a-song .content-inner ul {
   -moz-column-count: 3;
   /* Firefox */
@@ -662,10 +664,23 @@ section.travel-lodging .content-inner ul li,
 section.things-to-do .content-inner ul li,
 section.our-story .content-inner ul li,
 section.registry .content-inner ul li,
+section.attire .content-inner ul li,
 section.suggest-a-song .content-inner ul li {
   display: inline-block;
   margin: 0;
   padding: 0;
+  min-height: 13rem;
+}
+@media screen and (max-width: 760px) {
+  section.getting-to-dallas .content-inner ul li,
+  section.travel-lodging .content-inner ul li,
+  section.things-to-do .content-inner ul li,
+  section.our-story .content-inner ul li,
+  section.registry .content-inner ul li,
+  section.attire .content-inner ul li,
+  section.suggest-a-song .content-inner ul li {
+    min-height: 17rem;
+  }
 }
 section.registry,
 section.suggest-a-song,
